@@ -17,11 +17,16 @@ const buttonInc = document.querySelector('#counter button[data-action="increment
 
 const valueShown = document.querySelector('#value')
 
-buttonDec.addEventListener('click', () => {
+buttonDec.addEventListener('click', onButtonDecClick);
+
+function onButtonDecClick() {
     counterValue -= 1;
     valueShown.textContent = counterValue
-});
-buttonInc.addEventListener('click', () => {
+}
+
+buttonInc.addEventListener('click', onButtonInkClick);
+
+function onButtonInkClick() {
     counterValue += 1;
     valueShown.textContent = counterValue
-});
+}
