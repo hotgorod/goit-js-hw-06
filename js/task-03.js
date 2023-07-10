@@ -36,33 +36,3 @@ const gallery = document.querySelector('.gallery')
 gallery.insertAdjacentHTML("beforeEnd", imageElements)
 
 
-// =================================================================
-
-
-// const imageEl = document.createElement('img')
-// imageEl.src = images.url;
-// imageEl.alt = images.alt;
-// console.log(imageEl);
-
-// const listEl = document.createElement('li')
-// console.log(listEl);
-// listEl.append(imageEl)
-
-// const makeImageElement = images => {
-//   const imageEl = document.createElement('img')
-// imageEl.src = images.url;
-//   imageEl.alt = images.alt;
-//   imageEl.width = 500
-// const listEl = document.createElement('li')
-//   listEl.append(imageEl)
-//   return listEl
-// }
-
-
-// console.log(makeImageElement(images[0]));
-
-// const imageElements = images.map(makeImageElement)
-// console.log(imageElements);
-
-// const gallery = document.querySelector('.gallery')
-// gallery.append(...imageElements)
