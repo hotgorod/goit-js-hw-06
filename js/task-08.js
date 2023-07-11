@@ -20,24 +20,37 @@
 // Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 
 const form = document.querySelector('.login-form')
-console.log(form);
 
 form.addEventListener('submit', onFormSubmit);
 
 
 function onFormSubmit(event) {
     event.preventDefault();
+  
+    let emptyInputFound = false;
 
-    // console.log(event.currentTarget.elements.textContent);
-    // console.log('Form submit');
+    for (let i = 0; i < event.currentTarget.elements.length; i++) {
+        const emptyInput = event.currentTarget.elements[i];
+        if (emptyInput.tagName === 'INPUT' && emptyInput.value === '') {
+            emptyInputFound = true;
+            break;
+        }
+    }
 
-if (event.currentTarget.elements.value== null) {alert('всі поля повинні бути заповнені')}
+    if (emptyInputFound) {
+        alert('всі поля повинні бути заповнені');
+        return;
+    }
 
     const formData = new FormData(event.currentTarget);
+    let requareAlert = false;
     formData.forEach((value, name) => {
-    console.log('name - ', name);
-    console.log('value - ', value);
+        console.log('name - ', name);
+        console.log('value - ', value);
+    })
     
-})
+    event.currentTarget.reset()
 }
+
+
 
