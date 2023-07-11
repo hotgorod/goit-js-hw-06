@@ -7,14 +7,12 @@
 // <span id="text">Abracadabra!</span>
 
 const input = document.querySelector('#font-size-control')
-console.log(input);
 const textForChange = document.querySelector('#text')
-console.log(textForChange);
 
 input.addEventListener('input', onRangeChange)
 
 function onRangeChange(event) {
-    console.log(event.currentTarget.value);
+    
     textForChange.setAttribute('style', `font-size: ${event.currentTarget.value}px`)
-    console.log(textForChange);
+    
 }

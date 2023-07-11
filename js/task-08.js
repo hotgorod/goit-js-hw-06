@@ -42,15 +42,24 @@ function onFormSubmit(event) {
         return;
     }
 
-    const formData = new FormData(event.currentTarget);
-    let requareAlert = false;
-    formData.forEach((value, name) => {
-        console.log('name - ', name);
-        console.log('value - ', value);
-    })
+    const mail = event.currentTarget.elements.email.value
+    const password = event.currentTarget.elements.password.value
     
+    const dataForm = {
+        mail, password
+    }
+    console.log(dataForm);
     event.currentTarget.reset()
 }
 
 
 
+// ================================================
+// left it for myself
+// ================================================
+    // const formData = new FormData(event.currentTarget);
+    // let requareAlert = false;
+    // formData.forEach((value, name) => {
+    //     console.log('name - ', name);
+    //     console.log('value - ', value);
+    // })

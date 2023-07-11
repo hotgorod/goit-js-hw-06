@@ -22,26 +22,21 @@
 // #validation-input.invalid {
 //   border-color: #f44336;
 // }
-
+// ================================================================
 const input = document.querySelector('#validation-input')
-console.log(input);
-
-
 input.addEventListener('blur', onInputChange)
 
 function onInputChange(event) {
-    
     if (Number(input.getAttribute('data-length')) === event.currentTarget.value.length) {
-        input.classList.remove('invalid')
-        input.classList.add('valid')
-        console.log('it is 6 symbols');
-        
+       addCorrectClass('invalid', 'valid')
     }
+
     else {
-        input.classList.remove('valid')
-        input.classList.add('invalid')
-        console.log('it is not 6 symbols');
-
+        addCorrectClass('valid', 'invalid')
+         }
+    
+    function addCorrectClass(a, b) {
+        input.classList.remove(a)
+        input.classList.add(b)
     }
-
 }
