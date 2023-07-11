@@ -31,7 +31,7 @@ const makeImageElement = ({url, alt}) => {
 }
 
 const imageElements = images.map(makeImageElement).join('')
-console.log(imageElements);
+
 const gallery = document.querySelector('.gallery')
 gallery.insertAdjacentHTML("beforeEnd", imageElements)
 

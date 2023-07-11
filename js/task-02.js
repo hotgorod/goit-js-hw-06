@@ -28,4 +28,4 @@ const elementsLi = ingredients.map(item => {
 
 const listIngridients = document.querySelector('#ingredients')
 listIngridients.append(...elementsLi)
-console.log(listIngridients);
+

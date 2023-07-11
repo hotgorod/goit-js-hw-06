@@ -6,13 +6,17 @@
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
 const input = document.querySelector('#name-input')
-console.log(input);
-
 const output = document.querySelector('#name-output')
-console.log(output);
 
 input.addEventListener('input', onInputInput)
 
 function onInputInput(event) {
     output.textContent = event.currentTarget.value;
+
+    if (event.currentTarget.value.trim() == '') {
+        output.textContent = 'Anonymous'
+    }
 }
+
+
+    
